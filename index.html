@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Gestion des Soutenances</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bg-slideshow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .bg-slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            animation: slide 9s infinite;
+        }
+        @keyframes slide {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        .bg-slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .bg-slideshow img:nth-child(2) {
+            animation-delay: 3s;
+        }
+        .bg-slideshow img:nth-child(3) {
+            animation-delay: 6s;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 3em;
+            margin-top: 20%;
+            animation: fadeInDown 2s ease-in-out, bounce 3s infinite;
+        }
+        .content p {
+            font-size: 1.5em;
+            animation: fadeInUp 2s ease-in-out, flash 3s infinite;
+        }
+        .content a {
+            margin: 10px;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        @keyframes flash {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-slideshow">
+        <img src="images/slide1.jpg" alt="Slide 1">
+        <img src="images/slide2.jpg" alt="Slide 2">
+        <img src="images/slide3.jpg" alt="Slide 3">
+    </div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Bienvenue à la Gestion des Soutenances</h1>
+        <p>Gérez vos soutenances facilement et efficacement.</p>
+        <a href="login.html" class="btn btn-primary">Se connecter</a>
+        <a href="register.html" class="btn btn-secondary">S'inscrire</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
